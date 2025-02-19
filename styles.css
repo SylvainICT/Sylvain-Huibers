@@ -390,3 +390,19 @@ footer {
     font-size: 16px;
 }
 
+
+
+/* Media query voor mobiele apparaten */
+@media (max-width: 768px) {
+    .floating-header-menu {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        gap: 5px;
+    }
+
+    .floating-header-menu a {
+        font-size: 16px; /* Kleinere lettergrootte voor mobiel */
+        padding: 10px 15px; /* Kleinere knop */
+    }
+}
