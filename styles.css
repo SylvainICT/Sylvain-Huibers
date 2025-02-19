@@ -392,17 +392,72 @@ footer {
 
 
 
-/* Media query voor mobiele apparaten */
-@media (max-width: 768px) {
+/* Media Queries voor mobiele weergave */
+@media only screen and (max-width: 768px) {
+    /* Logo aan de bovenkant */
+    .logo {
+        top: 10px;
+        left: 10px;
+        width: 10px;
+    }
+
+    /* Menu aanpassingen */
     .floating-header-menu {
         top: 10px;
         right: 10px;
-        padding: 8px 15px;
-        gap: 5px;
+        padding: 10px 10px;
+        gap: 8px;
     }
 
     .floating-header-menu a {
-        font-size: 16px; /* Kleinere lettergrootte voor mobiel */
-        padding: 10px 15px; /* Kleinere knop */
+        font-size: 14px;
+        padding: 8px 10px;
     }
+
+    /* Welkom bij Devosmo sectie */
+    #home h1 {
+        font-size: 35px;
+    }
+
+    #home p {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    /* Over mij sectie */
+    #about h2 {
+        font-size: 30px;
+    }
+
+    #about p {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    /* Projecten sectie */
+    .project-grid {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* Contact sectie */
+    form input, form textarea {
+        width: 100%;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Footer aanpassingen */
+    footer {
+        font-size: 14px;
+    }
+}  .logo img {
+    width: 60px; /* Logo kleiner maken op mobiel */
 }
