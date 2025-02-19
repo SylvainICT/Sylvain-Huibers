@@ -1,0 +1,191 @@
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Georgia', serif;
+}
+
+/* Header sectie */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+
+.name {
+    font-size: 2rem;
+    margin-left: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+/* Over mij sectie */
+.about-me {
+    height: 100vh;
+    background: url('IMG_1720\ 2.JPG') no-repeat center 30%; /* Verplaatst de foto naar beneden */
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start; /* Text uitlijnen naar links */
+    align-items: center;
+    color: white;
+    text-align: left; /* Tekst naar links uitlijnen */
+    padding-left: 30px; /* Ruimte aan de linkerkant van de tekst */
+    position: relative;
+}
+
+.about-me::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    font-size: 1rem; /* Verkleinde tekstgrootte */
+    max-width: 500px; /* Maximaal 500px breedte voor de tekst */
+}
+
+h1 {
+    font-size: 2.5rem; /* Verkleinde tekstgrootte voor h1 */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1rem; /* Verkleinde tekstgrootte voor de paragraaf */
+    line-height: 1.6;
+}
+
+/* Footer sectie */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000; /* Zwarte achtergrond */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 2; /* Zorgen dat de footer boven andere elementen komt */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsieve stijlen */
+@media (max-width: 768px) {
+    header {
+        top: 10px;
+        left: 10px;
+    }
+
+    .logo img {
+        width: 60px; /* Logo kleiner maken op mobiel */
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .about-me {
+        padding: 10px;
+    }
+
+    .content {
+        max-width: 90%;
+        font-size: 1rem;
+        padding: 15px;
+        background: transparent;
+        border-radius: 10px;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        font-size: 0.1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.6rem;
+    }
+}
+/* Algemeen voor het zwevende menu */
+.floating-header-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: slideInMenu 0.8s ease-out;
+}
+
+/* Stijl voor de links in het menu */
+.floating-header-menu a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Hover-effect voor de links */
+.floating-header-menu a:hover {
+    background-color: gold;
+    color: black;
+    border-color: gold;
+    transform: scale(1.05);
+}
+
+/* Animatie voor het in- en uitschuiven van het menu */
+@keyframes slideInMenu {
+    from {
+        right: -300px;
+        opacity: 0;
+    }
+    to {
+        right: 20px;
+        opacity: 1;
+    }
+}
