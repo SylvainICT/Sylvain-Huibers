@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #2C3E50; /* Rijke achtergrondkleur */
-    color: #fff;
+    color: #000000;
     overflow-x: hidden;
 }
 
@@ -171,7 +171,7 @@ form {
 }
 
 form input, form textarea {
-    padding: 10px;
+    padding: 10px 30px;
     margin-bottom: 20px;
     border: 2px solid #ccc;
     border-radius: 5px;

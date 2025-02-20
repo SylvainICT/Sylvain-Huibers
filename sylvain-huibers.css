@@ -73,34 +73,6 @@ p {
 }
 
 /* Footer sectie */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000; /* Zwarte achtergrond */
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 2; /* Zorgen dat de footer boven andere elementen komt */
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
 
 /* Responsieve stijlen */
 @media (max-width: 768px) {
@@ -144,39 +116,7 @@ footer {
     }
 }
 /* Algemeen voor het zwevende menu */
-.floating-header-menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    z-index: 100;
-    display: flex;
-    gap: 10px;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    animation: slideInMenu 0.8s ease-out;
-}
 
-/* Stijl voor de links in het menu */
-.floating-header-menu a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    padding: 15px 20px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-/* Hover-effect voor de links */
-.floating-header-menu a:hover {
-    background-color: gold;
-    color: black;
-    border-color: gold;
-    transform: scale(1.05);
-}
 
 /* Animatie voor het in- en uitschuiven van het menu */
 @keyframes slideInMenu {
@@ -188,16 +128,4 @@ footer {
         right: 20px;
         opacity: 1;
     }
-}
- /* Menu aanpassingen */
- .floating-header-menu {
-    top: 10px;
-    right: 10px;
-    padding: 10px 10px;
-    gap: 8px;
-}
-
-.floating-header-menu a {
-    font-size: 14px;
-    padding: 8px 10px;
 }
